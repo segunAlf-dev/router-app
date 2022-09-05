@@ -4,6 +4,8 @@ import './Login.css';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import { blue } from '@mui/material/colors';
 
 
 const Login = () => {
@@ -13,7 +15,21 @@ const Login = () => {
     
 
   return (
- <Box  id='box'>
+ <Box  sx={{
+          width: 500,
+          display: 'flex',
+          // justifyContent: 'center',
+          // alignContent: 'center',
+          p: 13,
+          ml: 68,
+          mt: 10,
+          bgcolor: ' rgb(236, 242, 242)',
+          borderRadius: 2,
+
+
+        
+         
+        }} >
      
         <form onSubmit={handleSubmit(onSubmit)} id='login_form'>
               <h1 id='login_header'>Welcome</h1>
@@ -24,7 +40,7 @@ const Login = () => {
           type="email"
           autoComplete="current-email"
           {...register('email', {required: true})}
-          sx={{minWidth: 450 }}
+          sx={{minWidth: 490 }}
         />
          <TextField
           id="outlined-password-input"
@@ -32,12 +48,12 @@ const Login = () => {
           type="password"
           autoComplete="current-password"
           {...register('password', {required: true, minLength: 8})}
-          sx={{minWidth: 450 }}
+          sx={{minWidth: 490 }}
         />
           {errors.password && <p>Invalid Password</p>}
             <Button variant="contained"  
-            sx={{minWidth: 445 }} type='submit'>Login</Button>
-            {/* <a >Don't have an account? create</a> */}
+            sx={{minWidth: 490 }} type='submit'>Login</Button> <br />
+            <span>Don't have an account? <Link sx={{color: blue, fontSize:'14px'}} to='/SignUp'> Sign Up </Link></span> 
            
         </form>
      
