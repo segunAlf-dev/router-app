@@ -12,21 +12,34 @@ export const SignUp = () => {
     
 
   return (
-    <Box id='box'>
+    <Box  sx={{
+          width: 500,
+          height: 400,
+          display: 'flex',
+          // justifyContent: 'center',
+          // alignContent: 'center',
+          p: 13,
+          ml: 68,
+          mt: 10,
+          bgcolor: ' rgb(236, 242, 242)',
+          borderRadius: 2,
+    }}>
           <form onSubmit={handleSubmit(onSubmit)} id='login_form'>
-              <h1 id='login_header'>Welcome</h1>
+              <h1 id='login_header'>Register</h1>
               <div>
                    <TextField
           required
           id="outlined-required"
           label="First Name"
           defaultValue=""
+            sx={{minWidth: 245 }}
         />
                   <TextField
           required
           id="outlined-required"
           label="Last Name"
           defaultValue=""
+            sx={{minWidth: 244 }}
         />
         </div>
        
@@ -36,7 +49,7 @@ export const SignUp = () => {
           type="email"
           autoComplete="current-email"
           {...register('email', {required: true})}
-          sx={{minWidth: 450 }}
+          sx={{minWidth: 490 }}
         />
          <TextField
           id="outlined-password-input"
@@ -44,11 +57,11 @@ export const SignUp = () => {
           type="password"
           autoComplete="current-password"
           {...register('password', {required: true, minLength: 8})}
-          sx={{minWidth: 450 }}
+          sx={{minWidth: 490 }}
         />
           {errors.password && <p>Invalid Password</p>}
             <Button variant="contained"  
-            sx={{minWidth: 445 }} type='submit'>Login</Button>
+            sx={{minWidth: 490 }} type='submit'>Login</Button>
      </form>
   
     </Box>
