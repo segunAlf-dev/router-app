@@ -7,8 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {Link} from 'react-router-dom';
-// import '../App.css';
-// import  SignUp  from '../components/SignUp';
+
 
  const NavBar = () => {
 
@@ -21,11 +20,11 @@ import {Link} from 'react-router-dom';
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 8 }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
             Router App
           </Typography>
                 
